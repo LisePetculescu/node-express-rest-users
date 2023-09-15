@@ -14,12 +14,12 @@ app.get("/", (request, response) => {
   response.send("Node.js Users REST API 🎉");
 });
 
-async function getUsersFromJSON() {
-  const data = await fs.readFile("data.json");
-  const users = JSON.parse(data);
-  users.sort((userA, userB) => userA.name.localeCompare(userB.name));
-  return users;
-}
+// async function getUsersFromJSON() {
+//   const data = await fs.readFile("data.json");
+//   const users = JSON.parse(data);
+//   users.sort((userA, userB) => userA.name.localeCompare(userB.name));
+//   return users;
+// }
 
 // READ all users
 app.get("/users", (request, response) => {
